@@ -27,8 +27,8 @@ LABEL       author="AlexProgrammerDE"
 LABEL       org.opencontainers.image.source="https://github.com/AlexProgrammerDE/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN 				apt-get update -y \
-						&& apt-get install -y curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 \
+RUN 				yum check-update -y \
+						&& yum install -y curl ca-certificates openssl git tar sqlite3 fontconfig libfreetype6 tzdata iproute2 libstdc++6 \
 						&& useradd -d /home/container -m container
 
 USER        container
