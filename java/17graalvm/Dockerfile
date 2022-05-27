@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-17-jdk
+FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/graalvm/jdk:java17-22.1.0
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
