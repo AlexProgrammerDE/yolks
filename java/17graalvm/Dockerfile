@@ -20,11 +20,11 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/graalvm/jdk:java17-22.1.0
+FROM        --platform=$TARGETOS/$TARGETARCH ghcr.io/graalvm/jdk:ol8-java17-22.1.0
 
-LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
+LABEL       author="AlexProgrammerDE"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/AlexProgrammerDE/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN 				apt-get update -y \
