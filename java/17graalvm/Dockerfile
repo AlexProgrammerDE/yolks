@@ -27,10 +27,9 @@ LABEL       author="AlexProgrammerDE"
 LABEL       org.opencontainers.image.source="https://github.com/AlexProgrammerDE/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN 				microdnf install -y yum \
-            && yum check-update -y \
-						&& yum install -y curl ca-certificates openssl git tar sqlite fontconfig freetype tzdata iproute libstdc++ ipset \
-						&& useradd -d /home/container -m container
+RUN 		microdnf install -y yum \
+ 			&& yum install -y curl ca-certificates openssl git tar sqlite fontconfig freetype tzdata iproute libstdc++ ipset \
+ 			&& useradd -d /home/container -m container
 
 USER        container
 ENV         USER=container HOME=/home/container
