@@ -43,4 +43,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/AlexProgrammerDE/yolks:java_${{ matrix.tag }}
+            ghcr.io/alexprogrammerde/yolks:java_${{ matrix.tag }}
