@@ -20,7 +20,11 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 WORKDIR     /home/container
 
-ENV PATH=/opt/graalvm/bin:$PATH
+ENV JAVA_HOME /opt/graalvm
+ENV PATH $JAVA_HOME/bin:$PATH
+
+# Default to UTF-8 file.encoding
+ENV LANG C.UTF-8
 
 COPY        ./entrypoint.sh /entrypoint.sh
 CMD         [ "/bin/bash", "/entrypoint.sh" ]
