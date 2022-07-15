@@ -11,7 +11,7 @@ RUN         apt update && apt upgrade -y \
     			liblua5.3 libz-dev rapidjson-dev ipset \
 				&& update-locale lang=en_US.UTF-8 \
 				&& dpkg-reconfigure --frontend noninteractive locales \
-				&& echo 'PATH="/opt/graalvm/bin:$PATH"' | install --mode 0644 /dev/stdin /etc/profile.d/graal-on-path.sh \
+				&& echo 'PATH="/graalvm/bin:$PATH"' | install --mode 0644 /dev/stdin /etc/profile.d/graal-on-path.sh \
 				&& useradd -m -d /home/container -s /bin/bash container
 
 USER        container
@@ -20,7 +20,7 @@ ENV         DEBIAN_FRONTEND noninteractive
 
 WORKDIR     /home/container
 
-ENV JAVA_HOME /opt/graalvm
+ENV JAVA_HOME /graalvm
 ENV PATH $JAVA_HOME/bin:$PATH
 
 # Default to UTF-8 file.encoding
